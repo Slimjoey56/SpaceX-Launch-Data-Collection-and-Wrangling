@@ -1,114 +1,58 @@
 # SpaceX Launch Data Collection and Wrangling
 
-This project focuses on collecting, processing, and preparing SpaceX launch data for exploratory data analysis and machine learning tasks.
+A Jupyter Notebook project focused on collecting and preparing Falcon 9 launch records for exploratory analysis and machine learning.
 
-The dataset was obtained from the SpaceX REST API and supplementary static JSON sources provided through the IBM Data Science Capstone course. The project demonstrates data acquisition, API integration, data cleaning, feature engineering, and dataset preparation using Python.
+This notebook forms part of the IBM Data Science Professional Certificate capstone learning pathway.
 
-## Project Objectives
+## Objective
 
-* Collect SpaceX launch data from APIs and static JSON files
-* Extract relevant launch information, including rocket, payload, core, and launch site details
-* Clean and transform raw data into a structured format
-* Handle missing values and inconsistencies
-* Prepare the dataset for downstream analysis and predictive modeling
+Launch records combine mission, rocket, payload, and booster information from different sources. The aim is to turn those records into a consistent tabular dataset that can support downstream analysis.
 
-## Dataset Features
+## Data Sources
 
-The final dataset includes information such as:
+- SpaceX REST API
+- Supplementary static JSON resources referenced in the IBM capstone material
 
-* Flight number
-* Launch date
-* Booster version
-* Payload mass
-* Orbit type
-* Launch site
-* Core reuse information
-* Landing outcome
-* Launch success status
+## Workflow
 
-## Technologies Used
+1. Retrieve launch information.
+2. Extract mission, payload, rocket, core, and launch-site attributes.
+3. Convert nested records into a tabular structure.
+4. Handle missing or inconsistent values.
+5. Prepare features for later analysis and modelling.
 
-* Python
-* Jupyter Notebook
-* Pandas
-* NumPy
-* Requests
-* JSON
-* REST APIs
+## Technologies
 
-## Project Structure
+Python, Pandas, NumPy, Requests, JSON, and Jupyter Notebook.
+
+## Repository Contents
 
 ```text
-├── jupyter-labs-spacex-data-collection-api-v2.ipynb
-├── dataset_part_1.csv
-├── requirements.txt
+.
+├── SpaceX launch data collection and wrangling project.ipynb
 └── README.md
 ```
 
-## Installation
+## How to Run
 
-Clone the repository:
-
-```bash
-git clone https://github.com/your-username/spacex-data-collection.git
-cd spacex-data-collection
-```
-
-Create and activate a virtual environment:
-
-```bash
-python -m venv .venv
-
-# Windows
-.venv\Scripts\activate
-
-# macOS/Linux
-source .venv/bin/activate
-```
-
-Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-
-Launch Jupyter Notebook:
+Install the packages imported by the notebook, then launch Jupyter:
 
 ```bash
 jupyter notebook
 ```
 
-Open:
+Open `SpaceX launch data collection and wrangling project.ipynb` and run the cells sequentially.
 
-```text
-jupyter-labs-spacex-data-collection-api-v2.ipynb
-```
+**Note:** The source API or hosted static data may change or become unavailable. The repository does not currently include the `dataset_part_1.csv` and `requirements.txt` files described in the previous README.
 
-Run the notebook cells sequentially to collect, process, and export the cleaned dataset.
+## Next Steps
 
-## API Note
+- Add a reproducible dependency specification.
+- Record the dataset source and extraction date.
+- Export and document the cleaned dataset.
+- Link this work to the subsequent SpaceX EDA and modelling repositories.
 
-The SpaceX API may occasionally return Cloudflare-related errors such as HTTP 521 or HTTP 525. If this occurs, use the provided static JSON dataset included in the notebook to complete the data collection process.
+## Author
 
-## Output
-
-The notebook generates a cleaned dataset:
-
-```text
-dataset_part_1.csv
-```
-
-This dataset can be used for exploratory data analysis, visualization, and machine learning tasks.
-
-## Future Work
-
-* Perform exploratory data analysis (EDA)
-* Build predictive models for launch success
-* Create interactive visualizations
-* Develop dashboards using Plotly or Dash
-
-## License
-
-This project is intended for educational purposes as part of the IBM Data Science Capstone course.
+Jehosaphat Brobbey Impiani  
+[GitHub](https://github.com/Slimjoey56)
